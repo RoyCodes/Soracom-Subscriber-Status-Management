@@ -1,4 +1,8 @@
-import requests, json, time, csv
+import requests, json, time, csv, os
+
+#remove previous output.log if exists.
+if os.path.exists("output.log"):
+    os.remove("output.log")
 
 #set up your Soracom API key and token
 x_soracom_key = "API KEY HERE"
@@ -11,8 +15,11 @@ headers = {
 
 payload = {}
 
-csv_file = open('dormant_imsi_list.csv')
+output_file = open('output.log', mode='w')
+csv_file = open('dormant_imsi_list.csv', mode='r')
 csv_data = csv.reader(csv_file, delimiter=',')
+output_data = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+
 for csv_list in csv_data:
     for item in csv_list:
         imsi = item
@@ -29,3 +36,8 @@ for csv_list in csv_data:
         response = requests.request("POST", url, headers=headers, data = payload)
 
         print(response.status_code, response.text.encode('utf8'))
+        output_row = [imsi, response.status_code]
+        output_data.writerow(output_row)
+
+csv_file.close()
+output_file.cose()
