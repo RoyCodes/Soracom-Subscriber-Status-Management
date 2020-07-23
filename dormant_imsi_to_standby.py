@@ -1,8 +1,8 @@
 import requests, json, time, csv
 
 #set up your Soracom API key and token
-x_soracom_token = "API TOKEN HERE"
 x_soracom_key = "API KEY HERE"
+x_soracom_token = "API TOKEN HERE"
 
 headers = {
   'X-Soracom-API-Key': x_soracom_key,

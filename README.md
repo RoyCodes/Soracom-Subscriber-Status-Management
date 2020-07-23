@@ -15,4 +15,4 @@ Run the Python script `json_to_csv.py` to parse the `subscribers_list.json` that
 Spot check the CSV file to make sure that there are no issues.
 
 # Step 4
-Add your API key and a fresh token to the Python script `dormant_imsi_to_standby.py` and then run it. This script will loop through each IMSI in `dormant_imsi_list.csv` and set it to STANDBY status. Please note that fees may apply when using STANDBY, so please check our [Pricing & Fee Schedule](https://developers.soracom.io/en/docs/reference/fees/#soracom-air-for-cellular) for reference.
+Generate a Soracom API key and token by calling the Soracom auth API with your credentials. Next, add your API key and the fresh token to the Python script `dormant_imsi_to_standby.py` and then run it. This script will loop through each IMSI in `dormant_imsi_list.csv` and set it to STANDBY status. Please note that fees may apply when using STANDBY, so please check our [Pricing & Fee Schedule](https://developers.soracom.io/en/docs/reference/fees/#soracom-air-for-cellular) for reference.
