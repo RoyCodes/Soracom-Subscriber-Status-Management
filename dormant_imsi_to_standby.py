@@ -40,4 +40,4 @@ for csv_list in csv_data:
         output_data.writerow(output_row)
 
 csv_file.close()
-output_file.cose()
+output_file.close()
