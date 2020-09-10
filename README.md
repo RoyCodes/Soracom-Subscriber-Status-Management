@@ -15,7 +15,7 @@ Run the Python script `json_to_csv.py` to parse the `subscribers_list.json` that
 Spot check the CSV file to make sure that there are no issues.
 
 # Step 4
-Generate a Soracom API key and token by calling the Soracom auth API with your credentials. Next, add your API key and the fresh token to the Python script `dormant_imsi_to_standby.py` and then run it. This script will loop through each IMSI in `dormant_imsi_list.csv` and set it to STANDBY status. Please note that fees may apply when using STANDBY, so please check our [Pricing & Fee Schedule](https://developers.soracom.io/en/docs/reference/fees/#soracom-air-for-cellular) for reference.
+Generate a Soracom AuthKey. This can be done from the Soracom User Console in the Security section. Next, add your AuthKey ID and Secret to the Python script `dormant_imsi_to_standby.py` and then run it. This script will loop through each IMSI in `dormant_imsi_list.csv` and set it to STANDBY status. Please note that fees may apply when using STANDBY, so please check our [Pricing & Fee Schedule](https://developers.soracom.io/en/docs/reference/fees/#soracom-air-for-cellular) for reference.
 
 # Alternative Step 4
 If you want to also change the group of the SIMs that you are setting to STANDBY status at the same time, then use the Python script `dormant_imsi_to_standby_and_set_group.py` instead. In addition to all of the details from Step 4 above, you will also need to add your target Group ID to the script before running it.
